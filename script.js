@@ -1,15 +1,31 @@
-// Tail-shaped scroll progress
+const root = document.documentElement;
+
+// ---- Day / night: Ariel by day, Lemur after hours ----
+const switchBtn = document.querySelector('.switch');
+function setMode(mode, scrollTop) {
+  root.dataset.mode = mode;
+  switchBtn.setAttribute('aria-checked', String(mode === 'night'));
+  try { localStorage.setItem('mode', mode); } catch (e) { /* private window: fine */ }
+  if (scrollTop) scrollTo({ top: 0 });
+  onScroll();
+}
+switchBtn.addEventListener('click', () => setMode(root.dataset.mode === 'night' ? 'day' : 'night', true));
+document.querySelectorAll('[data-set-mode]').forEach((el) => {
+  el.addEventListener('click', () => setMode(el.dataset.setMode, true));
+});
+
+// ---- Tail-shaped scroll progress ----
 const bar = document.querySelector('.tail-progress__bar');
-const onScroll = () => {
-  const max = document.documentElement.scrollHeight - innerHeight;
+function onScroll() {
+  const max = root.scrollHeight - innerHeight;
   bar.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
-};
+}
 addEventListener('scroll', onScroll, { passive: true });
 addEventListener('resize', onScroll);
-onScroll();
+setMode(root.dataset.mode || 'day');
 
-// Gentle reveal on scroll
-const targets = document.querySelectorAll('.stat, .card, .job, .learning__col, .beyond__block, .neo, .contact');
+// ---- Gentle reveal on scroll ----
+const targets = document.querySelectorAll('.stat, .card, .job, .quote, .beyond__block, .neo, .contact');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -19,18 +35,18 @@ if ('IntersectionObserver' in window) {
   targets.forEach((el) => { el.classList.add('reveal'); io.observe(el); });
 }
 
-// Boop the lemur
-const head = document.querySelector('.peek__head');
-if (head) {
-  head.addEventListener('click', () => {
-    head.classList.remove('boop');
-    void head.offsetWidth;
-    head.classList.add('boop');
+// ---- Boop the lemur ----
+const walker = document.querySelector('.walker');
+if (walker) {
+  walker.addEventListener('click', () => {
+    walker.classList.remove('boop');
+    void walker.offsetWidth;
+    walker.classList.add('boop');
   });
-  head.addEventListener('animationend', () => head.classList.remove('boop'));
+  walker.addEventListener('animationend', () => walker.classList.remove('boop'));
 }
 
-// Lemur facts
+// ---- Lemur facts ----
 const facts = [
   'Ring-tailed lemur troops are led by females.',
   'A ring-tailed lemur’s tail is longer than its body.',

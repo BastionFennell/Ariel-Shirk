@@ -1,18 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="day">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ariel Shirk · Support Operations Leader</title>
-  <meta name="description" content="Ariel Shirk is a support operations and trust &amp; safety leader in Austin, TX with 15 years of experience building calm, capable teams. Friends call her Lemur.">
+  <meta name="description" content="Field notes on Ariel Shirk, a support operations and trust &amp; safety leader in Austin, TX with 15 years of experience building calm, capable teams. Common name: Lemur.">
   <meta property="og:title" content="Ariel Shirk · Support Operations Leader">
-  <meta property="og:description" content="15 years leading support, trust &amp; safety, and training teams for Fortune 500 clients. Friends call her Lemur.">
+  <meta property="og:description" content="15 years leading support, trust &amp; safety, and training teams for Fortune 500 clients. Common name: Lemur.">
   <meta property="og:image" content="images/ariel-portrait.jpg">
-  <meta name="theme-color" content="#f6f1e7">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    // Set the mode before first paint so there is no flash
+    (function () {
+      var m = null;
+      try { m = localStorage.getItem('mode'); } catch (e) {}
+      if (/[?&#]night\b|mode=night/.test(location.href)) m = 'night';
+      if (/[?&#]day\b|mode=day/.test(location.href)) m = 'day';
+      if (m === 'night') document.documentElement.dataset.mode = 'night';
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..800,50..100,0..1;1,9..144,400..800,50..100,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Chakra+Petch:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..800,50..100,0..1;1,9..144,400..800,50..100,0..1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,45 +30,37 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="lemur-face" viewBox="0 0 120 104">
-      <!-- ears -->
       <g stroke="#23211f" stroke-width="3">
         <ellipse cx="24" cy="30" rx="15" ry="17" fill="#fbf8f1" transform="rotate(-24 24 30)"/>
         <ellipse cx="96" cy="30" rx="15" ry="17" fill="#fbf8f1" transform="rotate(24 96 30)"/>
       </g>
       <ellipse cx="25" cy="32" rx="6" ry="9" fill="#9a958d" transform="rotate(-24 25 32)"/>
       <ellipse cx="95" cy="32" rx="6" ry="9" fill="#9a958d" transform="rotate(24 95 32)"/>
-      <!-- head -->
       <path d="M60 14c26 0 42 17 42 38 0 14-9 24-20 32-8 6-14 14-22 14s-14-8-22-14C27 76 18 66 18 52c0-21 16-38 42-38z" fill="#fbf8f1" stroke="#23211f" stroke-width="3" stroke-linejoin="round"/>
-      <!-- grey cap with widow's peak -->
       <path d="M21 43c3-17 18-27.500 39-27.500S96 26 99 43c-9-7-22-8-30-1l-9 10-9-10c-8-7-21-6-30 1z" fill="#8a8680"/>
-      <!-- eye patches -->
       <path d="M29 56c2-9 11-13 19-9 5 3 7 9 4 15-3 6-10 8-16 6-6-2-8-7-7-12z" fill="#23211f"/>
       <path d="M91 56c-2-9-11-13-19-9-5 3-7 9-4 15 3 6 10 8 16 6 6-2 8-7 7-12z" fill="#23211f"/>
-      <!-- eyes -->
-      <g class="lemur-eyes">
-        <circle cx="42" cy="57" r="6.500" fill="#f29a1f"/>
-        <circle cx="78" cy="57" r="6.500" fill="#f29a1f"/>
-        <circle cx="42" cy="57" r="2.800" fill="#23211f"/>
-        <circle cx="78" cy="57" r="2.800" fill="#23211f"/>
-        <circle cx="43.500" cy="55.300" r="1.100" fill="#fff"/>
-        <circle cx="79.500" cy="55.300" r="1.100" fill="#fff"/>
-      </g>
-      <!-- muzzle -->
+      <circle cx="42" cy="57" r="6.500" fill="#f29a1f"/><circle cx="78" cy="57" r="6.500" fill="#f29a1f"/>
+      <circle cx="42" cy="57" r="2.800" fill="#23211f"/><circle cx="78" cy="57" r="2.800" fill="#23211f"/>
+      <circle cx="43.500" cy="55.300" r="1.100" fill="#fff"/><circle cx="79.500" cy="55.300" r="1.100" fill="#fff"/>
       <path d="M60 72c7 0 11 4 11 9 0 6-5 11-11 11s-11-5-11-11c0-5 4-9 11-9z" fill="#3a3734"/>
       <path d="M54.500 77.500c0-2.500 2.500-4 5.500-4s5.500 1.500 5.500 4c0 2.300-2.700 4.500-5.500 4.500s-5.500-2.200-5.500-4.500z" fill="#141312"/>
-      <path d="M60 82v4m-5 1.500c2 2 3.500 2 5-1.500 1.500 3.500 3 3.500 5 1.500" fill="none" stroke="#141312" stroke-width="1.600" stroke-linecap="round"/>
     </symbol>
-
-    <symbol id="lemur-paw" viewBox="0 0 30 24">
-      <path d="M4 22V11a4 4 0 0 1 8 0V8a3.500 3.500 0 0 1 7 0v3a3.500 3.500 0 0 1 7 0v11z" fill="#3a3734" stroke="#23211f" stroke-width="2" stroke-linejoin="round"/>
+    <symbol id="lemur-visor" viewBox="0 0 120 104">
+      <use href="#lemur-face"/>
+      <path d="M25 50h32l6 5 6-5h26v14H69l-6-5-6 5H25z" fill="#0c0a16" stroke="#ff7a1a" stroke-width="2.500" stroke-linejoin="round"/>
+      <path d="M30 55h22M74 55h18" stroke="#8dff6a" stroke-width="2.500" stroke-linecap="round"/>
     </symbol>
-
-    <!-- a tail is one path drawn three times: outline, white fur, black rings -->
-    <symbol id="tail-divider" viewBox="0 0 600 60" preserveAspectRatio="none">
-      <path id="td" d="M12 30C100 -6 170 66 300 30S500 -6 588 30" fill="none"/>
-      <use href="#td" stroke="#23211f" stroke-width="20" stroke-linecap="round"/>
-      <use href="#td" stroke="#fbf8f1" stroke-width="15" stroke-linecap="round"/>
-      <use href="#td" stroke="#23211f" stroke-width="15" stroke-dasharray="22 22" stroke-dashoffset="-11"/>
+    <!-- walking lemur, after the maker's mark Ariel stamps into her leatherwork -->
+    <symbol id="lemur-walk" viewBox="0 0 200 160">
+      <path id="wt" d="M46 98C8 84 10 30 50 22c30-6 42 24 20 32" fill="none"/>
+      <use href="#wt" stroke="currentColor" stroke-width="17" stroke-linecap="round"/>
+      <use href="#wt" stroke="var(--tail-light, #faf5e8)" stroke-width="12" stroke-linecap="round"/>
+      <use href="#wt" stroke="currentColor" stroke-width="12" stroke-dasharray="11 11" stroke-dashoffset="-5"/>
+      <g stroke="currentColor" stroke-width="10" stroke-linecap="round"><path d="M56 110l-8 38M74 114l4 34M112 114l-4 34M126 108l10 40"/></g>
+      <ellipse cx="88" cy="100" rx="50" ry="23" fill="currentColor"/>
+      <path d="M124 88c2-16 14-24 28-20l2-10 8 12c8 6 14 14 20 22-8 8-22 10-34 8s-22-4-24-12z" fill="currentColor"/>
+      <circle cx="158" cy="84" r="4.500" fill="#f29a1f"/><circle cx="158" cy="84" r="1.800" fill="#111"/>
     </symbol>
   </defs>
 </svg>
@@ -68,87 +69,118 @@
 
 <header class="nav">
   <a class="nav__brand" href="#top" aria-label="Ariel Shirk, home">
-    <svg class="nav__lemur" viewBox="0 0 120 104" aria-hidden="true"><use href="#lemur-face"/></svg>
-    <span>Ariel Shirk</span>
+    <svg class="nav__lemur day-only" viewBox="0 0 120 104" aria-hidden="true"><use href="#lemur-face"/></svg>
+    <svg class="nav__lemur night-only" viewBox="0 0 120 104" aria-hidden="true"><use href="#lemur-visor"/></svg>
+    <span class="day-only">Ariel Shirk</span><span class="night-only">LEMUR</span>
   </a>
   <nav class="nav__links" aria-label="Sections">
     <a href="#strengths">Strengths</a>
     <a href="#experience">Experience</a>
+    <a href="#kind-words">Kind words</a>
     <a href="#beyond">Beyond work</a>
     <a href="#contact">Contact</a>
   </nav>
-  <a class="btn btn--small" href="Ariel-Shirk-Resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a>
+  <button class="switch" type="button" role="switch" aria-checked="false" aria-label="After hours mode">
+    <span class="switch__opt switch__opt--day"><span aria-hidden="true">☀</span> Ariel</span>
+    <span class="switch__opt switch__opt--night"><span aria-hidden="true">☾</span> Lemur</span>
+  </button>
 </header>
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__text">
-      <p class="eyebrow">Support operations · Trust &amp; safety · Austin, TX</p>
-      <h1>Hi, I’m Ariel.<br><em>Friends call me Lemur.</em></h1>
-      <p class="lede">I’ve spent 15 years building support teams that stay calm, kind, and effective at scale, from a 20-person multi-channel floor to 80+ trust &amp; safety specialists for Fortune 500 clients.</p>
-      <p class="lede lede--small">I like tidy workflows, honest numbers, and making sure the people doing the hard work feel looked after.</p>
-      <div class="hero__cta">
-        <a class="btn" href="mailto:ariel.shirk@gmail.com">Say hello</a>
-        <a class="btn btn--ghost" href="https://www.linkedin.com/in/arielshirk/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn--ghost" href="resume.html">View résumé</a>
+  <!-- HERO · DAY -->
+  <section class="hero hero--day day-only">
+    <div class="plate-head">
+      <span>Field notes · Austin, Texas</span>
+      <span>Plate No. 01 · Support operations</span>
+    </div>
+    <div class="hero__grid">
+      <div class="hero__text">
+        <h1>Ariel Shirk</h1>
+        <p class="latin"><i>Lemur catta arielis</i> · common name: “Lemur”</p>
+        <p class="lede">A support operations leader, 15 years in the field. Known for building calm, capable teams and leaving every process tidier than she found it.</p>
+        <dl class="specimen">
+          <div><dt>Habitat</dt><dd>Support, trust &amp; safety, and product operations teams</dd></div>
+          <div><dt>Behaviour</dt><dd>Grew a troop from 10 to 80+ specialists; raised chat CSAT 7% in a month</dd></div>
+          <div><dt>Diet</dt><dd>Honest metrics, tidy workflows, well-run meetings</dd></div>
+          <div><dt>Status</dt><dd><span class="stamp">Open to new roles</span></dd></div>
+        </dl>
+        <div class="cta">
+          <a class="btn" href="mailto:ariel.shirk@gmail.com">Say hello</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/arielshirk/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost" href="resume.html">Résumé</a>
+        </div>
+      </div>
+
+      <div class="hero__plate">
+        <div class="tape" aria-hidden="true"></div>
+        <figure class="taped">
+          <img src="images/ariel-portrait.jpg" alt="Ariel smiling, with dark hair and a bright orange streak, wearing a colorful illustrated t-shirt" width="975" height="1300">
+          <figcaption>Fig. 1. The specimen, at ease.</figcaption>
+        </figure>
+        <p class="scribble scribble--a" aria-hidden="true">seasonal plumage ↙</p>
+        <p class="scribble scribble--b" aria-hidden="true">troops are led by females →</p>
+        <button class="walker" type="button" aria-label="Boop the lemur" tabindex="-1">
+          <svg viewBox="0 0 200 160"><use href="#lemur-walk"/></svg>
+        </button>
       </div>
     </div>
+    <button class="mode-link" type="button" data-set-mode="night">Nocturnal form also documented. <b>See after hours <span aria-hidden="true">☾</span></b></button>
+  </section>
 
-    <div class="hero__photo">
-      <div class="peek" aria-hidden="true">
-        <svg class="peek__tail" viewBox="0 0 120 300">
-          <path id="pt" d="M30 6C34 90 20 150 44 210c16 40 62 44 62 10 0-22-30-22-28-2" fill="none"/>
-          <use href="#pt" stroke="#23211f" stroke-width="23" stroke-linecap="round"/>
-          <use href="#pt" stroke="#fbf8f1" stroke-width="18" stroke-linecap="round"/>
-          <use href="#pt" stroke="#23211f" stroke-width="18" stroke-dasharray="19 19" stroke-dashoffset="-10"/>
-        </svg>
-        <button class="peek__head" type="button" aria-label="Boop the lemur" tabindex="-1">
-          <svg viewBox="0 0 120 104"><use href="#lemur-face"/></svg>
-        </button>
-        <svg class="peek__paw peek__paw--l" viewBox="0 0 30 24"><use href="#lemur-paw"/></svg>
-        <svg class="peek__paw peek__paw--r" viewBox="0 0 30 24"><use href="#lemur-paw"/></svg>
+  <!-- HERO · NIGHT -->
+  <section class="hero hero--night night-only">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow">// after hours · handle:</p>
+        <h1 class="glitch">Lemur</h1>
+        <p class="lede">Ariel Shirk, after 5pm. Leatherworker, weaver, tree planter, keeper of one old cat and two dogs, and a citizen of Neotropolis, the cyberpunk city that appears in the Mojave once a year.</p>
+        <ul class="chips">
+          <li>SMUDGE.cat</li><li>SAGE.dog</li><li>PONCY.dog</li><li>leather</li><li>loom</li><li>trees</li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="#beyond">Look around <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--ghost" href="#experience">The day job</a>
+          <button class="btn btn--ghost" type="button" data-set-mode="day"><span aria-hidden="true">☀</span> Office hours</button>
+        </div>
       </div>
-      <figure class="frame">
-        <img src="images/ariel-portrait.jpg" alt="Ariel smiling, with dark hair and a bright orange streak, wearing a colorful illustrated t-shirt" width="975" height="1300">
+      <figure class="neon-frame">
+        <img src="images/selfie.jpg" alt="Ariel, wearing white lemur ears and a wire-and-mesh cyberpunk eyepiece, grinning and waving next to her bearded partner" width="1300" height="975">
+        <figcaption>&gt; Lemur (right, with ears) at Neotropolis</figcaption>
       </figure>
-      <p class="hero__note" aria-hidden="true">that’s me! <span>(the one without the tail)</span></p>
     </div>
   </section>
 
   <!-- NUMBERS -->
-  <section class="stats" aria-label="Career highlights in numbers">
-    <div class="stat"><b>15</b><span>years leading support &amp; training teams</span></div>
-    <div class="stat"><b>80+</b><span>specialists and 5 leads directed at peak</span></div>
-    <div class="stat"><b>+7%</b><span>chat CSAT in a single month</span></div>
-    <div class="stat"><b>40%</b><span>faster social media response times</span></div>
-    <div class="stat"><b>400%</b><span>engagement lift for a Fortune 50 client</span></div>
+  <section class="section section--stats" aria-label="Career highlights in numbers">
+    <p class="eyebrow"><span class="day-only">Field measurements</span><span class="night-only">// stats.log</span></p>
+    <div class="stats">
+      <div class="stat"><b>15</b><span>years leading support &amp; training teams</span></div>
+      <div class="stat"><b>80+</b><span>specialists and 5 leads directed at peak</span></div>
+      <div class="stat"><b>+7%</b><span>chat CSAT in a single month</span></div>
+      <div class="stat"><b>40%</b><span>faster social media response times</span></div>
+      <div class="stat"><b>400%</b><span>engagement lift for a Fortune 50 client</span></div>
+    </div>
   </section>
-
-  <svg class="divider" aria-hidden="true"><use href="#tail-divider"/></svg>
 
   <!-- STRENGTHS -->
   <section id="strengths" class="section">
-    <p class="eyebrow">What I bring</p>
+    <p class="eyebrow"><span class="day-only">Distinguishing traits</span><span class="night-only">// core_skills</span></p>
     <h2>People first, backed by data.</h2>
     <div class="cards">
       <article class="card">
-        <div class="card__icon" aria-hidden="true">🌱</div>
-        <h3>Leading &amp; growing teams</h3>
-        <p>I’ve scaled a team from 10 to 80+ and coached the leads who run it. I design training that sticks and build the kind of trust that keeps people around.</p>
+        <h3>Leads &amp; grows teams</h3>
+        <p>Scaled a team from 10 to 80+ and coached the leads who run it. Designs training that sticks and builds the kind of trust that keeps people around.</p>
         <ul class="tags"><li>Team leadership</li><li>Coaching</li><li>Training design</li><li>Cross-functional collaboration</li></ul>
       </article>
       <article class="card">
-        <div class="card__icon" aria-hidden="true">🔍</div>
-        <h3>Decisions from evidence</h3>
-        <p>I track KPIs, forecast volume, and listen to the frontline, then adjust the roadmap based on what the numbers and the people actually say.</p>
+        <h3>Decides from evidence</h3>
+        <p>Tracks KPIs, forecasts volume, and listens to the frontline, then adjusts the roadmap based on what the numbers and the people actually say.</p>
         <ul class="tags"><li>Data analysis</li><li>Workforce management</li><li>User research</li><li>Agile</li><li>SQL</li></ul>
       </article>
       <article class="card">
-        <div class="card__icon" aria-hidden="true">🧭</div>
-        <h3>Operations that hold up</h3>
-        <p>I rework workflows, partner with product, engineering, and policy, and keep quality steady through policy changes, incidents, and rapid growth.</p>
+        <h3>Builds operations that hold up</h3>
+        <p>Reworks workflows with product, engineering, and policy, and keeps quality steady through policy changes, incidents, and rapid growth.</p>
         <ul class="tags"><li>Process optimization</li><li>Product strategy</li><li>CSAT &amp; KPIs</li><li>Vendor management</li></ul>
       </article>
     </div>
@@ -156,15 +188,13 @@
 
   <!-- EXPERIENCE -->
   <section id="experience" class="section">
-    <p class="eyebrow">Where I’ve been</p>
+    <p class="eyebrow"><span class="day-only">Known range</span><span class="night-only">// the day job</span></p>
     <h2>Experience</h2>
 
     <ol class="timeline">
       <li class="job">
-        <div class="job__head">
-          <h3>Trust &amp; Safety Product and Operations Lead</h3>
-          <p class="job__meta"><strong>Accenture</strong> · Mar 2017 – May 2025</p>
-        </div>
+        <h3>Trust &amp; Safety Product and Operations Lead</h3>
+        <p class="job__meta"><strong>Accenture</strong> · Mar 2017 – May 2025</p>
         <ul>
           <li>Directed a team that grew from 10 to 80+ content specialists and 5 leads, using data analysis to monitor key performance metrics.</li>
           <li>Defined and shipped product and process improvements that raised quality metrics and user-facing performance indicators.</li>
@@ -174,10 +204,8 @@
         </ul>
       </li>
       <li class="job">
-        <div class="job__head">
-          <h3>Operations Manager</h3>
-          <p class="job__meta"><strong>teleNetwork</strong> · 2014 – 2017</p>
-        </div>
+        <h3>Operations Manager</h3>
+        <p class="job__meta"><strong>teleNetwork</strong> · 2014 – 2017</p>
         <ul>
           <li>Ran chat, email, social, and phone support for 20+ specialists.</li>
           <li>Designed a 24/7 chat scheduling system from historical and forecasted volume.</li>
@@ -187,10 +215,8 @@
         </ul>
       </li>
       <li class="job">
-        <div class="job__head">
-          <h3>Senior Training &amp; Implementation Manager</h3>
-          <p class="job__meta"><strong>teleNetwork</strong> · 2010 – 2013</p>
-        </div>
+        <h3>Senior Training &amp; Implementation Manager</h3>
+        <p class="job__meta"><strong>teleNetwork</strong> · 2010 – 2013</p>
         <ul>
           <li>Created training programs and operational frameworks for large-scale support systems.</li>
           <li>Led quality and training teams through major tool transitions, including new chat platforms and product features.</li>
@@ -201,13 +227,13 @@
     </ol>
 
     <div class="learning">
-      <div class="learning__col">
+      <div class="card">
         <h3>Education</h3>
         <p><strong>B.A., Philosophy</strong><br>Texas State University, San Marcos · 2010</p>
         <p class="aside">Useful training for anyone who has to ask “but what problem are we actually solving?”</p>
       </div>
-      <div class="learning__col">
-        <h3>Recently learned <span class="pill">2025</span></h3>
+      <div class="card">
+        <h3>Recently acquired skills <span class="pill">2025</span></h3>
         <ul class="certs">
           <li><strong>Certified Scrum Product Owner® (CSPO®)</strong> Scrum Alliance®</li>
           <li><strong>Scrum Foundation Professional Certificate</strong> CertiProf</li>
@@ -216,51 +242,81 @@
         </ul>
       </div>
     </div>
+    <p class="resume-line"><a class="btn btn--ghost" href="Ariel-Shirk-Resume.pdf" download>Download the full résumé <span aria-hidden="true">↓</span></a></p>
   </section>
 
-  <svg class="divider" aria-hidden="true"><use href="#tail-divider"/></svg>
+  <!-- RECOMMENDATIONS -->
+  <section id="kind-words" class="section">
+    <p class="eyebrow"><span class="day-only">Reported sightings</span><span class="night-only">// peer_reviews</span></p>
+    <h2>What colleagues say.</h2>
+    <div class="quotes">
+      <figure class="quote quote--lead">
+        <blockquote>
+          <p>What truly sets Ariel apart is her leadership. She strikes that rare balance between meeting complex corporate demands and showing genuine care for the people she leads.</p>
+          <p>If you’re looking for someone who delivers results, earns trust, and elevates the people around her; Ariel is that person.</p>
+        </blockquote>
+        <figcaption><b>Kurt Overmier</b> Worked with Ariel on the same team</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote><p>I witnessed outstanding leadership and direction that directly impacted our KPIs and client satisfaction… If you are looking for a wonderful person who has true drive and skill in decision making, then you have found her!</p></blockquote>
+        <figcaption><b>Cole Stonebraker</b> Reported to Ariel directly</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote><p>Ariel has passion to understand and optimize processes, keen to identify inefficiencies and develop strategies to improve outcomes.</p></blockquote>
+        <figcaption><b>Ruaa Salih</b> Managed Ariel directly</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote><p>She was always the first to volunteer and eager to learn and adapt to new programs… will be an asset to any organization that she works with!</p></blockquote>
+        <figcaption><b>David Dalesandro</b> Senior colleague at Accenture</figcaption>
+      </figure>
+    </div>
+    <p class="quotes__source">Excerpts from recommendations on <a href="https://www.linkedin.com/in/arielshirk/" target="_blank" rel="noopener">Ariel’s LinkedIn profile</a>.</p>
+  </section>
 
   <!-- BEYOND WORK -->
   <section id="beyond" class="section">
-    <p class="eyebrow">Beyond the résumé</p>
-    <h2>The rest of the lemur.</h2>
-    <p class="section__intro">The same things that make me good at support show up everywhere else: I like showing up for people, making things with my hands, and looking after small creatures.</p>
+    <p class="eyebrow"><span class="day-only">Enrichment</span><span class="night-only">// off the clock</span></p>
+    <h2><span class="day-only">The rest of the lemur.</span><span class="night-only">What Lemur gets up to.</span></h2>
+    <p class="section__intro">The things that make Ariel good at support show up everywhere else: she shows up for people, makes things with her hands, and looks after small creatures.</p>
 
     <div class="beyond">
       <article class="beyond__block">
         <div class="beyond__text">
-          <h3>Showing up for my community</h3>
-          <p>I volunteer around Austin with <a href="https://www.treefolks.org/" target="_blank" rel="noopener">TreeFolks</a>, helping grow the city’s urban forest, and with the <a href="https://www.refugeecollective.org/" target="_blank" rel="noopener">Refugee Collective</a>, which supports refugee neighbors building new livelihoods here.</p>
-          <p>I also never miss an election.</p>
+          <h3>Shows up for her community</h3>
+          <p>Ariel plants trees around Austin with <a href="https://www.treefolks.org/" target="_blank" rel="noopener">TreeFolks</a>, and volunteers with the <a href="https://www.refugeecollective.org/" target="_blank" rel="noopener">Refugee Collective</a>.</p>
+          <p>She also never misses an election.</p>
         </div>
-        <div class="polaroids">
-          <figure class="polaroid tilt-l"><img loading="lazy" src="images/voted.jpg" alt="Ariel smiling in a car, holding up her palm with “I voted” written on it in pen" width="975" height="1300"><figcaption>no sticker, no problem</figcaption></figure>
+        <div class="snaps">
+          <figure class="snap tilt-l"><img loading="lazy" src="images/trees.jpg" alt="Volunteers kneeling around a newly planted tree, spreading mulch by hand" width="979" height="1300"><figcaption>mulch day with TreeFolks</figcaption></figure>
+          <figure class="snap tilt-r"><img loading="lazy" src="images/voted.jpg" alt="Ariel smiling in a car, holding up her palm with “I voted” written on it in pen" width="975" height="1300"><figcaption>no sticker, no problem</figcaption></figure>
         </div>
       </article>
 
       <article class="beyond__block beyond__block--flip">
         <div class="beyond__text">
-          <h3>Making things by hand</h3>
-          <p>Leatherworking, weaving, and whatever craft has most recently caught my attention. There’s something grounding about slow, careful work where you can hold the result at the end.</p>
-          <p>It’s also good practice for management: measure twice, be patient, and expect to learn something from every mistake.</p>
+          <h3>Makes things by hand</h3>
+          <p>Leatherwork, weaving, and whatever craft has most recently caught her attention. Slow, careful work where you can hold the result at the end.</p>
+          <p>Her maker’s mark, stamped into each leather piece, is a small lemur with its tail in the air. The one walking around this site is drawn after it.</p>
         </div>
-        <div class="polaroids">
-          <figure class="polaroid tilt-r"><img loading="lazy" src="images/forge.jpg" alt="Ariel in safety glasses and a leather apron, standing in front of a lit forge" width="720" height="959"><figcaption>a day at the forge</figcaption></figure>
-          <figure class="polaroid tilt-l"><img loading="lazy" src="images/wool.jpg" alt="A hand holding a ball of wool roving in red, orange, yellow, and black" width="975" height="1300"><figcaption>fiber for the next project</figcaption></figure>
+        <div class="snaps snaps--grid">
+          <figure class="snap tilt-r"><img loading="lazy" src="images/pouch.jpg" alt="Five views of a hand-stitched dark red leather belt pouch with white stitching and a silver clasp" width="960" height="960"><figcaption>hand-stitched belt pouch</figcaption></figure>
+          <figure class="snap tilt-l"><img loading="lazy" class="zoom-mark" src="images/tray.jpg" alt="A snap-cornered leather tray with a purple lining, stamped in the center with a small lemur and the word Lemur" width="960" height="836"><figcaption>the maker’s mark</figcaption></figure>
+          <figure class="snap tilt-l"><img loading="lazy" src="images/forge.jpg" alt="Ariel in safety glasses and a leather apron, standing in front of a lit forge" width="720" height="959"><figcaption>a day at the forge</figcaption></figure>
+          <figure class="snap tilt-r"><img loading="lazy" src="images/wool.jpg" alt="A hand holding a ball of wool roving in red, orange, yellow, and black" width="975" height="1300"><figcaption>fiber for the next project</figcaption></figure>
         </div>
       </article>
 
       <article class="beyond__block">
         <div class="beyond__text">
-          <h3>Critters, mine and otherwise</h3>
-          <p>Home is shared with one distinguished old-man cat, all white and very opinionated, and two dogs who handle morale.</p>
-          <p>And yes, given the nickname, I take every chance I get to meet an actual lemur.</p>
+          <h3><span class="day-only">Cohabiting species</span><span class="night-only">The crew</span></h3>
+          <p>Home is shared with <b>Smudge</b>, a distinguished all-white old-man cat, and two dogs: <b>Sage</b>, who is tall and white and cheerful, and <b>Poncy</b>, a Cavalier who is mostly ears.</p>
+          <p>Given the nickname, Ariel also takes every chance she gets to meet an actual lemur.</p>
         </div>
-        <div class="polaroids polaroids--grid">
-          <figure class="polaroid tilt-l"><img loading="lazy" src="images/cat.jpg" alt="A white cat curled up asleep on a lap, chin resting in a hand" width="1300" height="975"><figcaption>the old man</figcaption></figure>
-          <figure class="polaroid tilt-r"><img loading="lazy" src="images/dogs.jpg" alt="A white dog sitting upright and smiling, with a brown and white spaniel lying behind" width="975" height="1300"><figcaption>head of morale &amp; deputy</figcaption></figure>
-          <figure class="polaroid tilt-r"><img loading="lazy" src="images/lemur-shoulder.jpg" alt="Ariel with a brown lemur climbing across her shoulders" width="1137" height="1300"><figcaption>lemur meets Lemur</figcaption></figure>
-          <figure class="polaroid tilt-l"><img loading="lazy" src="images/red-ruffed-lemur.jpg" alt="Ariel reaching out to pet a red ruffed lemur" width="1300" height="979"><figcaption>networking</figcaption></figure>
+        <div class="snaps snaps--grid">
+          <figure class="snap tilt-l"><img loading="lazy" src="images/cat.jpg" alt="A white cat curled up asleep on a lap, chin resting in a hand" width="1300" height="975"><figcaption>Smudge</figcaption></figure>
+          <figure class="snap tilt-r"><img loading="lazy" src="images/dogs.jpg" alt="A white dog sitting upright and smiling, with a brown and white Cavalier spaniel lying behind" width="975" height="1300"><figcaption>Sage &amp; Poncy</figcaption></figure>
+          <figure class="snap tilt-r"><img loading="lazy" src="images/lemur-shoulder.jpg" alt="Ariel with a brown lemur climbing across her shoulders" width="1137" height="1300"><figcaption>lemur meets Lemur</figcaption></figure>
+          <figure class="snap tilt-l"><img loading="lazy" src="images/red-ruffed-lemur.jpg" alt="Ariel reaching out to pet a red ruffed lemur" width="1300" height="979"><figcaption>networking</figcaption></figure>
         </div>
       </article>
     </div>
@@ -268,21 +324,23 @@
     <article class="neo">
       <div class="neo__grid" aria-hidden="true"></div>
       <div class="neo__body">
-        <p class="neo__eyebrow">// once a year · Mojave Desert</p>
+        <p class="neo__eyebrow"><span class="day-only">Annual migration · Mojave Desert</span><span class="night-only">// once a year · Mojave Desert</span></p>
         <h3>Neotropolis</h3>
-        <p>Every year we pack up and head into the Mojave for <a href="https://www.neotropolis.com/" target="_blank" rel="noopener">Neotropolis</a>, an immersive cyberpunk city that springs up in the desert for a few days. It’s costumes, neon, dust, and a few thousand people building a story together.</p>
-        <p>It’s the trip I look forward to all year, and a good reminder that the best communities are the ones everyone helps make.</p>
+        <p>Once a year Ariel and her partner pack up and head into the Mojave for <a href="https://www.neotropolis.com/" target="_blank" rel="noopener">Neotropolis</a>, an immersive cyberpunk city that springs up in the desert for a few days. Costumes, neon, dust, and a whole town of people building a story together.</p>
+        <p>It’s the trip she looks forward to all year, and a good reminder that the best communities are the ones everyone helps make.</p>
+        <button class="btn day-only" type="button" data-set-mode="night">See the after-hours version <span aria-hidden="true">☾</span></button>
       </div>
-      <svg class="neo__lemur" viewBox="0 0 120 104" aria-hidden="true"><use href="#lemur-face"/><path d="M27 52h30l6 5 6-5h24v12H69l-6-5-6 5H27z" fill="#0d0b1a" stroke="#ff3fb4" stroke-width="2.500" stroke-linejoin="round"/><path d="M31 56h22M73 56h18" stroke="#29e6ff" stroke-width="2.500" stroke-linecap="round"/></svg>
+      <svg class="neo__lemur" viewBox="0 0 120 104" aria-hidden="true"><use href="#lemur-visor"/></svg>
     </article>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section contact">
-    <svg class="contact__lemur" viewBox="0 0 120 104" aria-hidden="true"><use href="#lemur-face"/></svg>
+    <svg class="contact__lemur" viewBox="0 0 200 160" aria-hidden="true"><use href="#lemur-walk"/></svg>
+    <p class="eyebrow"><span class="day-only">How to approach</span><span class="night-only">// open channel</span></p>
     <h2>Let’s talk.</h2>
-    <p>I’m looking for my next role leading support, trust &amp; safety, or product operations teams. If you’re building something where customers and the people who help them both matter, I’d love to hear about it.</p>
-    <div class="hero__cta contact__cta">
+    <p>Ariel is looking for her next role leading support, trust &amp; safety, or product operations teams. Approach calmly; she responds well to email.</p>
+    <div class="cta contact__cta">
       <a class="btn" href="mailto:ariel.shirk@gmail.com">ariel.shirk@gmail.com</a>
       <a class="btn btn--ghost" href="https://www.linkedin.com/in/arielshirk/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn btn--ghost" href="Ariel-Shirk-Resume.pdf" download>Download résumé</a>
@@ -296,7 +354,7 @@
     <span class="fact__text">Ring-tailed lemur troops are led by females.</span>
     <span class="fact__more" aria-hidden="true">another ↻</span>
   </button>
-  <p>© <span id="year">2026</span> Ariel Shirk · Austin, TX · Made with love (and stripes)</p>
+  <p>© <span id="year">2026</span> Ariel Shirk · Austin, TX · Made by hand, with stripes</p>
 </footer>
 
 <script src="script.js"></script>
