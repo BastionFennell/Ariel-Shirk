@@ -537,3 +537,11 @@ main { display: flex; flex-direction: column; }
 html, body { overflow-x: clip; }
 .hero__plate::before { width: 500px; height: 500px; top: -36px; right: -210px; }
 @media (max-width: 960px) { .hero__plate::before { width: 380px; height: 380px; top: -30px; right: -160px; } }
+
+/* phone polish */
+@media (max-width: 520px) {
+  .scribble--a { right: -68px; width: 62px; font-size: 1.15rem; top: 44px; }
+  .walker { bottom: -66px; }
+  .neon-frame { transform: rotate(.6deg); margin-inline: 4px; }
+  .hero--day h1 { margin-top: 1.2rem; }
+}
