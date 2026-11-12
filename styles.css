@@ -140,7 +140,7 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 
 /* ---------- layout ---------- */
 main { display: flex; flex-direction: column; }
-/* after hours, the personal side comes first */
+/* off-world, the personal side comes first */
 [data-mode="night"] #beyond { order: -1; }
 [data-mode="night"] .hero--night { order: -2; }
 

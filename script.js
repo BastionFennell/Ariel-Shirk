@@ -1,6 +1,6 @@
 const root = document.documentElement;
 
-// ---- Day / night: Ariel by day, Lemur after hours ----
+// ---- Day / night: Ariel by day, Lemur off-world ----
 const switchBtn = document.querySelector('.switch');
 function setMode(mode, scrollTop) {
   root.dataset.mode = mode;
