@@ -424,3 +424,116 @@ main { display: flex; flex-direction: column; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ============================================================
+   Day mode colour: sun rings, woven bands, stitched patches
+   ============================================================ */
+:root {
+  --forest: #2f5a3b;
+  --sun: #f3a94a;
+  --rust: #c2570f;
+  --cream: #faf5e8;
+  --weave:
+    repeating-linear-gradient(90deg, var(--leaf) 0 12px, transparent 12px 24px),
+    repeating-linear-gradient(0deg, var(--accent) 0 5.500px, var(--paper) 5.500px 11px);
+  --rings: repeating-radial-gradient(circle, #f08a24 0 24px, #f6b04a 24px 48px, var(--bg) 48px 55px);
+}
+
+/* sun behind the specimen photo */
+.hero__plate { isolation: isolate; }
+.hero__plate::before {
+  content: ""; position: absolute; z-index: -1; width: 560px; height: 560px; border-radius: 50%;
+  top: -120px; right: -230px; background: var(--rings);
+}
+.scribble--a { color: var(--ink); text-shadow: 0 0 6px var(--bg), 0 0 6px var(--bg); }
+
+/* stat tiles as coloured patches */
+[data-mode="day"] .stat::before { border-color: #faf5e899; }
+[data-mode="day"] .stat:nth-child(1) { background: var(--forest); }
+[data-mode="day"] .stat:nth-child(2) { background: var(--rust); }
+[data-mode="day"] .stat:nth-child(3) { background: var(--sun); }
+[data-mode="day"] .stat:nth-child(4) { background: var(--leather); }
+[data-mode="day"] .stat:nth-child(5) { background: var(--leaf); }
+[data-mode="day"] .stat b, [data-mode="day"] .stat span { color: var(--cream); }
+[data-mode="day"] .stat:nth-child(1) b, [data-mode="day"] .stat:nth-child(4) b { color: var(--sun); }
+[data-mode="day"] .stat:nth-child(3) b, [data-mode="day"] .stat:nth-child(3) span { color: var(--ink); }
+[data-mode="day"] .stat:nth-child(3)::before { border-color: #24402f66; }
+
+/* full-width colour bands with woven edges */
+[data-mode="day"] #strengths, [data-mode="day"] #kind-words {
+  position: relative; margin-top: 4.500rem; padding-top: 5rem; padding-bottom: 5rem;
+  box-shadow: 0 0 0 100vmax var(--band); clip-path: inset(0 -100vmax); background: var(--band);
+}
+[data-mode="day"] #strengths { --band: var(--forest); color: var(--cream); }
+[data-mode="day"] #kind-words { --band: var(--sun); }
+[data-mode="day"] #strengths::before, [data-mode="day"] #strengths::after,
+[data-mode="day"] #kind-words::before, [data-mode="day"] #kind-words::after {
+  content: ""; position: absolute; left: 50%; margin-left: -50vw; width: 100vw; height: 20px;
+  background: var(--weave); border-block: 2px solid var(--ink);
+}
+[data-mode="day"] #strengths::before, [data-mode="day"] #kind-words::before { top: 0; }
+[data-mode="day"] #strengths::after, [data-mode="day"] #kind-words::after { bottom: 0; }
+[data-mode="day"] #strengths .eyebrow { color: var(--sun); }
+[data-mode="day"] #strengths .card { color: var(--ink); }
+[data-mode="day"] #kind-words .eyebrow { color: var(--ink); }
+[data-mode="day"] #kind-words .quotes__source, [data-mode="day"] #kind-words .quotes__source a { color: var(--ink); }
+[data-mode="day"] .quote--lead { background: var(--forest); color: var(--cream); }
+[data-mode="day"] .quote--lead::before { border-color: #faf5e888; }
+[data-mode="day"] .quote--lead figcaption { color: #faf5e8cc; border-color: #faf5e855; }
+[data-mode="day"] .quote--lead figcaption b { color: var(--sun); }
+
+/* coloured tape on the snapshots */
+[data-mode="day"] .snap::before {
+  content: ""; position: absolute; z-index: 1; top: -9px; left: 50%; width: 84px; height: 24px; margin-left: -42px;
+  background: #f08a24cc; transform: rotate(-3deg);
+}
+[data-mode="day"] .snap { position: relative; overflow: visible; }
+[data-mode="day"] .snap:nth-child(even)::before { background: #3f6b48cc; transform: rotate(4deg); }
+.snap > img { position: relative; }
+.snap .zoom-mark { transform: none; object-position: 50% 62%; }
+
+/* Neotropolis card uses a photo from the event */
+.neo {
+  background:
+    linear-gradient(90deg, #0c0a16 30%, #0c0a16c4 52%, #0c0a1610 100%),
+    url(images/neotropolis.jpg) 100% 27% / 62% auto no-repeat, #0c0a16;
+  min-height: 420px; display: flex; align-items: center;
+}
+.neo__lemur { width: clamp(90px, 11vw, 130px); }
+
+/* contact: sunrise over a green hill */
+.contact-wrap { position: relative; overflow: hidden; margin-top: 3rem; }
+[data-mode="day"] .contact-wrap::before {
+  content: ""; position: absolute; left: 50%; top: 30px; width: 620px; height: 620px; margin-left: -310px;
+  border-radius: 50%; background: var(--rings);
+}
+[data-mode="day"] .contact-wrap::after {
+  content: ""; position: absolute; left: -15%; right: -15%; top: 215px; bottom: -400px;
+  border-radius: 50% 50% 0 0 / 220px 220px 0 0; background: var(--forest); border-top: 3px solid var(--ink);
+}
+.contact { position: relative; z-index: 1; }
+[data-mode="day"] .contact { padding-top: 5.500rem; color: var(--cream); }
+[data-mode="day"] .contact__lemur { margin-bottom: 3.200rem; width: 150px; }
+[data-mode="day"] .contact .eyebrow { color: var(--sun); }
+[data-mode="day"] .contact > p:not(.eyebrow) { color: var(--cream); }
+[data-mode="day"] .contact .btn { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+[data-mode="day"] .contact .btn--ghost { background: transparent; color: var(--cream); }
+[data-mode="day"] .contact .btn--ghost:hover { background: var(--cream); color: var(--ink); box-shadow: 0 4px 0 var(--accent); }
+[data-mode="day"] .footer { background: var(--forest); color: #faf5e8cc; margin-top: 0; }
+
+@media (max-width: 960px) {
+  .hero__plate::before { width: 420px; height: 420px; top: -90px; right: -170px; }
+  .neo {
+    background:
+      linear-gradient(180deg, #0c0a1640 0, #0c0a16e6 40%, #0c0a16 62%),
+      url(images/neotropolis.jpg) 50% 0 / 100% auto no-repeat, #0c0a16;
+    padding-top: 220px; display: block;
+  }
+  .neo__lemur { position: absolute; right: 1rem; bottom: auto; top: 120px; margin: 0; }
+  [data-mode="day"] .contact-wrap::after { left: -40%; right: -40%; }
+}
+
+/* decorative shapes may hang off the edge without causing sideways scroll */
+html, body { overflow-x: clip; }
+.hero__plate::before { width: 500px; height: 500px; top: -36px; right: -210px; }
+@media (max-width: 960px) { .hero__plate::before { width: 380px; height: 380px; top: -30px; right: -160px; } }
