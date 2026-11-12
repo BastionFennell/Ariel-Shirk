@@ -37,7 +37,7 @@
   <div class="bar"><a href="index.html">← Back to site</a><a href="Ariel-Shirk-Resume.pdf" download>Download PDF ↓</a></div>
   <main class="page">
     <h1>Ariel Shirk</h1>
-    <p class="contact">Austin, TX · <a href="mailto:ariel.shirk@gmail.com">ariel.shirk@gmail.com</a> · <a href="https://www.linkedin.com/in/arielshirk/">linkedin.com/in/arielshirk</a></p>
+    <p class="contact">Austin, TX · <a href="https://www.linkedin.com/in/arielshirk/" data-u="ariel.shirk" data-d="gmail.com">ariel.shirk [at] gmail.com</a> · <a href="https://www.linkedin.com/in/arielshirk/">linkedin.com/in/arielshirk</a></p>
     <div class="stripe"></div>
 
     <h2>Summary</h2>
@@ -94,5 +94,11 @@
       <li><b>Introduction to Python Certificate</b>, SoloLearn (2025): variables, loops, functions, and data structures for scripting and automation.</li>
     </ul>
   </main>
+  <script>
+    document.querySelectorAll('[data-u][data-d]').forEach(function (a) {
+      var addr = a.dataset.u + '@' + a.dataset.d;
+      a.href = 'mailto:' + addr; a.textContent = addr;
+    });
+  </script>
 </body>
 </html>

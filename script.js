@@ -64,3 +64,11 @@ factBtn.addEventListener('click', () => {
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ---- Email: assembled here so the address never sits in the page source for scrapers ----
+document.querySelectorAll('[data-u][data-d]').forEach((a) => {
+  const addr = a.dataset.u + '@' + a.dataset.d;
+  a.href = 'mailto:' + addr;
+  const text = a.querySelector('.js-mail-text');
+  if (text) text.textContent = addr;
+});
