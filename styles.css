@@ -184,7 +184,8 @@ main { display: flex; flex-direction: column; }
   color: var(--ink); animation: stroll 9s ease-in-out infinite;
 }
 .walker svg { display: block; width: 100%; }
-.walker.boop { animation: hop .55s ease; }
+/* the hop runs on the drawing inside, so the stroll on the button carries on undisturbed */
+.walker.boop svg { animation: hop .55s ease; }
 @keyframes stroll { 0%, 100% { transform: translateX(0) rotate(-3deg); } 50% { transform: translateX(26px) rotate(-1deg); } }
 @keyframes hop { 40% { transform: translateY(-26px) rotate(-10deg); } 75% { transform: translateY(0) rotate(2deg); } }
 
