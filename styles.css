@@ -566,3 +566,6 @@ html, body { overflow-x: clip; }
   .nav__lemur { width: 30px; height: 26px; }
   .switch__opt { padding: .28rem .45rem; font-size: .8rem; }
 }
+
+/* keep the specimen table clear of the handwritten note and the walking lemur beside the photo */
+@media (min-width: 961px) { .specimen { margin-right: 4.500rem; } }
