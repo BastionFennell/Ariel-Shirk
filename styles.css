@@ -546,3 +546,6 @@ html, body { overflow-x: clip; }
   .neon-frame { transform: rotate(.6deg); margin-inline: 4px; }
   .hero--day h1 { margin-top: 1.2rem; }
 }
+
+.certs--one { grid-template-columns: 1fr; }
+.card__sub { margin-top: 1.600rem; }
