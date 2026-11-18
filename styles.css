@@ -549,3 +549,20 @@ html, body { overflow-x: clip; }
 
 .certs--one { grid-template-columns: 1fr; }
 .card__sub { margin-top: 1.600rem; }
+
+/* ---------- contrast: keep small coloured text at 4.5:1 or better ---------- */
+:root { --rust: #a94a0b; --sun-text: #fbcb80; }
+:root:not([data-mode="night"]) { --accent-ink: #9c4409; }
+.pill { background: var(--accent-ink); }
+[data-mode="night"] .pill { background: var(--accent); }
+[data-mode="day"] #strengths .eyebrow,
+[data-mode="day"] .contact .eyebrow,
+[data-mode="day"] .quote--lead figcaption b { color: var(--sun-text); }
+
+/* very narrow phones */
+@media (max-width: 360px) {
+  .scribble--a { display: none; }
+  .nav__brand span { font-size: .95rem; white-space: nowrap; }
+  .nav__lemur { width: 30px; height: 26px; }
+  .switch__opt { padding: .28rem .45rem; font-size: .8rem; }
+}
