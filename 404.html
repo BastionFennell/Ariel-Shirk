@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" data-mode="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Ariel Shirk</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <script>
+    (function () {
+      try { if (localStorage.getItem('mode') === 'night') document.documentElement.dataset.mode = 'night'; } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Chakra+Petch:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..800,50..100,0..1;1,9..144,400..800,50..100,0..1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f1e9d6; --paper: #faf5e8; --ink: #24402f; --soft: #4b5a4f; --accent: #cf6217; --accent-ink: #9c4409;
+      --line: #24402f38; --tail-light: #faf5e8;
+      --display: "Fraunces", Georgia, serif; --mono: "Space Mono", ui-monospace, Menlo, monospace;
+      --rings: repeating-radial-gradient(circle, #f08a24 0 14%, #f6b04a 14% 28%, #f1e9d6 28% 32%);
+    }
+    [data-mode="night"] {
+      --bg: #0c0a16; --paper: #151228; --ink: #eefbe9; --soft: #b9c8b6; --accent: #ff7a1a; --accent-ink: #ff9a4d;
+      --line: #8dff6a40; --tail-light: #0c0a16; --display: "Chakra Petch", sans-serif;
+      --rings: repeating-radial-gradient(circle, #ff7a1a 0 3%, #0c0a16 3% 14%, #8dff6a 14% 16%, #0c0a16 16% 28%);
+    }
+    [data-mode="day"] .night-only, [data-mode="night"] .day-only { display: none !important; }
+    * { box-sizing: border-box; }
+    html, body { overflow-x: clip; }
+    body {
+      margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink);
+      font: 400 1.0625rem/1.6 "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+      display: flex; flex-direction: column;
+    }
+    [data-mode="day"] body { background-image: radial-gradient(#0000000a 1px, transparent 1px); background-size: 5px 5px; }
+    main { width: 100%; max-width: 860px; margin: 0 auto; padding: 2.4rem 1.25rem 3rem; flex: 1; }
+    .plate-head {
+      display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+      font: 400 .78rem var(--mono); letter-spacing: .14em; text-transform: uppercase;
+      padding-bottom: .7rem; border-bottom: 2px solid var(--ink); position: relative;
+    }
+    .plate-head::after { content: ""; position: absolute; inset: auto 0 -6px 0; border-bottom: 1px solid var(--ink); }
+    [data-mode="night"] .plate-head { color: #8dff6a; border-color: #8dff6a; text-transform: none; letter-spacing: .06em; }
+    [data-mode="night"] .plate-head::after { display: none; }
+
+    .code { display: flex; align-items: center; justify-content: center; gap: clamp(.4rem, 2vw, 1.2rem); margin: 2.600rem 0 1.2rem; }
+    .code span { font: 650 clamp(6rem, 26vw, 13rem)/.8 var(--display); font-variation-settings: "SOFT" 100, "WONK" 1; letter-spacing: -.03em; }
+    [data-mode="night"] .code span { color: #fff; text-shadow: 0 0 24px #ff7a1a, 4px 0 0 #ff7a1acc, -4px 0 0 #8dff6acc; }
+    .zero {
+      width: clamp(6rem, 25vw, 12.500rem); aspect-ratio: 1; border-radius: 50%; background: var(--rings);
+      display: grid; place-items: center; border: 3px solid var(--ink); flex: none;
+    }
+    [data-mode="night"] .zero { border-color: #8dff6a; box-shadow: 0 0 40px #8dff6a55; }
+    .zero svg { width: 58%; animation: bob 4s ease-in-out infinite; }
+    @keyframes bob { 0%, 100% { transform: translateY(4%) rotate(-3deg); } 50% { transform: translateY(-4%) rotate(3deg); } }
+
+    h1 { font: 620 clamp(2rem, 6vw, 3.200rem)/1.05 var(--display); font-variation-settings: "SOFT" 100, "WONK" 1; margin: 0; text-align: center; }
+    [data-mode="night"] h1 { text-transform: uppercase; letter-spacing: .03em; font-weight: 700; }
+    .lede { font-size: 1.2rem; text-align: center; max-width: 31em; margin: 1rem auto 0; }
+
+    dl { margin: 1rem 0 0; }
+    dl > div { display: grid; grid-template-columns: 11.500rem 1fr; gap: .5rem; padding: .7rem 0; border-top: 1px solid var(--line); }
+    dt { font: 400 .78rem/1.9 var(--mono); letter-spacing: .13em; text-transform: uppercase; color: var(--accent-ink); }
+    dd { margin: 0; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .4rem; padding: .7rem 1.3rem; border-radius: 999px;
+      background: var(--ink); color: var(--bg); border: 2px solid var(--ink); font-weight: 700; text-decoration: none;
+      box-shadow: 0 4px 0 var(--accent); transition: transform .15s, box-shadow .15s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--accent); }
+    [data-mode="night"] .btn { border-radius: 4px; background: #8dff6a; border-color: #8dff6a; color: #0c0a16; box-shadow: 0 0 18px #8dff6a66; font-family: var(--display); text-transform: uppercase; letter-spacing: .04em; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+    .log { margin: .9rem 0 0; text-align: center; min-height: 1.3em; font: 500 1.500rem/1.2 "Caveat", cursive; color: var(--accent-ink); }
+    [data-mode="night"] .log { font: .9rem var(--mono); color: #8dff6a; }
+
+    /* the lemur you can chase */
+    .runner {
+      position: fixed; left: 0; top: 0; width: clamp(84px, 14vw, 132px); padding: 0; border: 0; background: none; cursor: pointer;
+      color: var(--ink); z-index: 5; transition: transform .7s cubic-bezier(.3, 1.4, .5, 1);
+    }
+    [data-mode="night"] .runner { color: #8dff6a; filter: drop-shadow(0 0 10px #8dff6a88); }
+    .runner svg { display: block; width: 100%; }
+    .runner.flip svg { transform: scaleX(-1); }
+
+    footer { height: 22px; border-block: 2px solid var(--ink);
+      background: repeating-linear-gradient(90deg, #3f6b48 0 12px, transparent 12px 24px), repeating-linear-gradient(0deg, var(--accent) 0 5.500px, var(--paper) 5.500px 11px); }
+    [data-mode="night"] footer { border-color: #8dff6a; background: repeating-linear-gradient(90deg, #8dff6a 0 12px, transparent 12px 24px), repeating-linear-gradient(0deg, #ff7a1a 0 5.500px, #151228 5.500px 11px); opacity: .8; }
+
+    @media (max-width: 560px) { dl > div { grid-template-columns: 1fr; gap: 0; } .plate-head span:last-child { display: none; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="lemur-face" viewBox="0 0 120 104">
+      <g stroke="#23211f" stroke-width="3">
+        <ellipse cx="24" cy="30" rx="15" ry="17" fill="#fbf8f1" transform="rotate(-24 24 30)"/>
+        <ellipse cx="96" cy="30" rx="15" ry="17" fill="#fbf8f1" transform="rotate(24 96 30)"/>
+      </g>
+      <ellipse cx="25" cy="32" rx="6" ry="9" fill="#9a958d" transform="rotate(-24 25 32)"/>
+      <ellipse cx="95" cy="32" rx="6" ry="9" fill="#9a958d" transform="rotate(24 95 32)"/>
+      <path d="M60 14c26 0 42 17 42 38 0 14-9 24-20 32-8 6-14 14-22 14s-14-8-22-14C27 76 18 66 18 52c0-21 16-38 42-38z" fill="#fbf8f1" stroke="#23211f" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M21 43c3-17 18-27.500 39-27.500S96 26 99 43c-9-7-22-8-30-1l-9 10-9-10c-8-7-21-6-30 1z" fill="#8a8680"/>
+      <path d="M29 56c2-9 11-13 19-9 5 3 7 9 4 15-3 6-10 8-16 6-6-2-8-7-7-12z" fill="#23211f"/>
+      <path d="M91 56c-2-9-11-13-19-9-5 3-7 9-4 15 3 6 10 8 16 6 6-2 8-7 7-12z" fill="#23211f"/>
+      <circle cx="42" cy="57" r="6.500" fill="#f29a1f"/><circle cx="78" cy="57" r="6.500" fill="#f29a1f"/>
+      <circle cx="42" cy="57" r="2.800" fill="#23211f"/><circle cx="78" cy="57" r="2.800" fill="#23211f"/>
+      <circle cx="43.500" cy="55.300" r="1.100" fill="#fff"/><circle cx="79.500" cy="55.300" r="1.100" fill="#fff"/>
+      <path d="M60 72c7 0 11 4 11 9 0 6-5 11-11 11s-11-5-11-11c0-5 4-9 11-9z" fill="#3a3734"/>
+      <path d="M54.500 77.500c0-2.500 2.500-4 5.500-4s5.500 1.500 5.500 4c0 2.300-2.700 4.500-5.500 4.500s-5.500-2.200-5.500-4.500z" fill="#141312"/>
+    </symbol>
+    <symbol id="lemur-visor" viewBox="0 0 120 104">
+      <use href="#lemur-face"/>
+      <path d="M25 50h32l6 5 6-5h26v14H69l-6-5-6 5H25z" fill="#0c0a16" stroke="#ff7a1a" stroke-width="2.500" stroke-linejoin="round"/>
+      <path d="M30 55h22M74 55h18" stroke="#8dff6a" stroke-width="2.500" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="lemur-walk" viewBox="0 0 200 160">
+      <path id="wt" d="M46 98C8 84 10 30 50 22c30-6 42 24 20 32" fill="none"/>
+      <use href="#wt" stroke="currentColor" stroke-width="17" stroke-linecap="round"/>
+      <use href="#wt" stroke="var(--tail-light)" stroke-width="12" stroke-linecap="round"/>
+      <use href="#wt" stroke="currentColor" stroke-width="12" stroke-dasharray="11 11" stroke-dashoffset="-5"/>
+      <g stroke="currentColor" stroke-width="10" stroke-linecap="round"><path d="M56 110l-8 38M74 114l4 34M112 114l-4 34M126 108l10 40"/></g>
+      <ellipse cx="88" cy="100" rx="50" ry="23" fill="currentColor"/>
+      <path d="M124 88c2-16 14-24 28-20l2-10 8 12c8 6 14 14 20 22-8 8-22 10-34 8s-22-4-24-12z" fill="currentColor"/>
+      <circle cx="158" cy="84" r="4.500" fill="#f29a1f"/><circle cx="158" cy="84" r="1.800" fill="#111"/>
+    </symbol>
+  </defs>
+</svg>
+
+<main>
+  <div class="plate-head">
+    <span class="day-only">Field notes · Sighting report</span><span class="night-only">// signal trace</span>
+    <span class="day-only">Plate No. 404 · Unconfirmed</span><span class="night-only">err_404 · no route</span>
+  </div>
+
+  <div class="code" role="img" aria-label="404">
+    <span aria-hidden="true">4</span>
+    <div class="zero">
+      <svg class="day-only" viewBox="0 0 120 104" aria-hidden="true"><use href="#lemur-face"/></svg>
+      <svg class="night-only" viewBox="0 0 120 104" aria-hidden="true"><use href="#lemur-visor"/></svg>
+    </div>
+    <span aria-hidden="true">4</span>
+  </div>
+
+  <h1><span class="day-only">Specimen not found</span><span class="night-only">Signal lost</span></h1>
+  <p class="lede day-only">The page at this address has left its usual range. It was last seen climbing a tree with the rest of your link in its mouth.</p>
+  <p class="lede night-only">This address doesn’t lead anywhere in Neotropolis, and Lemur has checked the alleys twice.</p>
+
+  <p class="log" aria-live="polite"></p>
+
+  <dl>
+    <div><dt>Last seen</dt><dd>Heading up a tree with its tail in the air</dd></div>
+    <div><dt>Likely cause</dt><dd>A mistyped address, or a link to a page that has since moved</dd></div>
+    <div><dt>Temperament</dt><dd>Curious and easily startled. There is one on this page now, and it will run if you click it.</dd></div>
+    <div><dt>Do not</dt><dd>Offer it your lunch. Lemurs remember who has snacks.</dd></div>
+    <div><dt>Recommended</dt><dd><a class="btn" href="/"><span class="day-only">Return to base camp</span><span class="night-only">Back to the city</span></a></dd></div>
+  </dl>
+
+</main>
+
+<button class="runner" type="button" aria-label="A lemur. Click to startle it.">
+  <svg viewBox="0 0 200 160" aria-hidden="true"><use href="#lemur-walk"/></svg>
+</button>
+
+<footer aria-hidden="true"></footer>
+
+<script>
+  const runner = document.querySelector('.runner');
+  const log = document.querySelector('.log');
+  let sightings = 0;
+  let x = 0;
+
+  const notes = {
+    1: 'Sighting 1 logged. It saw you too.',
+    2: 'Sighting 2. Same lemur, different spot.',
+    3: 'Sighting 3. It has started keeping notes on you.',
+    5: 'Sighting 5. You now qualify as a field researcher.',
+    8: 'Sighting 8. It is letting you find it at this point.',
+    12: 'Sighting 12. The page you wanted is still missing, for the record.',
+    20: 'Sighting 20. You two should exchange numbers.',
+  };
+
+  function place(first) {
+    const w = runner.offsetWidth, h = runner.offsetHeight;
+    const maxX = Math.max(0, innerWidth - w - 12), maxY = Math.max(0, innerHeight - h - 12);
+    let nx, ny, tries = 0;
+    do {
+      // it starts tucked into the bottom-right corner, clear of the text
+      nx = first ? maxX : 12 + Math.random() * (maxX - 12);
+      ny = first ? maxY - 26 : 70 + Math.random() * Math.max(0, maxY - 70);
+      tries++;
+    } while (!first && Math.abs(nx - x) < innerWidth * 0.25 && tries < 12);
+    runner.classList.toggle('flip', first || nx < x);   // face the way it's going; at first, face the page
+    x = nx;
+    runner.style.transform = `translate(${nx}px, ${ny}px)`;
+  }
+
+  runner.addEventListener('click', () => {
+    sightings++;
+    log.textContent = notes[sightings] || `Sighting ${sightings} logged.`;
+    place(false);
+  });
+  addEventListener('resize', () => place(false));
+  x = 0;
+  place(true);
+</script>
+</body>
+</html>
