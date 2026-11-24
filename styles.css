@@ -569,3 +569,7 @@ html, body { overflow-x: clip; }
 
 /* keep the specimen table clear of the handwritten note and the walking lemur beside the photo */
 @media (min-width: 961px) { .specimen { margin-right: 4.500rem; } }
+
+.card--wide { grid-column: 1 / -1; }
+.certs--three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 960px) { .certs--three { grid-template-columns: 1fr; } }
